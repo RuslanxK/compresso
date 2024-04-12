@@ -84,18 +84,24 @@ html {
 }
 
 .main-component {
-  background-size: 600px !important;
-  background-position-y: top !important ;
-  background-repeat: no-repeat !important;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 75px;
+    padding-right: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/assets/background.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    
 }
 
 .hero {
   @include flexBox();
-  align-items: flex-start;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 50px 0;
+  
 
   .left-div {
     .why-compress {
@@ -103,7 +109,7 @@ html {
       @include flexBox();
       align-items: flex-start;
       column-gap: 10px;
-
+    
       .why-icon {
         .icon-question {
           font-size: 30px;

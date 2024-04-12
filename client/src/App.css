@@ -22,65 +22,8 @@
   src: local("Birzia-Bold"), url("./fonts/Birzia-Bold.woff") format("woff");
 }
 
-.header {
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1200px;
-}
 
-.header .nav {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
-}
 
-.header .nav a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.header .nav a:hover {
-  color: #0080FF;
-}
-
-.header .header-button-div {
-  text-align: center;
-}
-
-.header .header-button-div button {
-  padding: 10px 20px;
-  border-radius: 15px;
-  background-color: #0080FF;
-  border: 1px solid #0080FF;
-  color: white;
-  margin-left: 10px;
-}
-
-.header .header-button-div #noBGbtn {
-  background: none;
-  color: #0080FF;
-}
 
 .hero {
   display: -webkit-box;
@@ -148,4 +91,3 @@
 .compressedImgSize {
   color: #0080FF;
 }
-/*# sourceMappingURL=App.css.map */

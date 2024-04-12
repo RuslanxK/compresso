@@ -21,18 +21,12 @@ const App = () => {
   };
 
   return (
-    <div
-      className="main-component"
-      style={{
-        background: `url("/Assets/Group 21.png")`,
-      }}
-    >
+    <div className="main-component">
+
+  
       <section className="hero">
         <div className="left-div">
-          <Files
-            pictures={dataPic}
-            webpCallBack={handleSwitcherCallBack}
-          ></Files>
+          <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
 
           <div className="why-compress">
             <div className="why-icon">
@@ -53,10 +47,7 @@ const App = () => {
         </div>
 
         <div className="right-div">
-          <DropFiles
-            switcherValue={switcherValue}
-            callback={data}
-          ></DropFiles>
+          <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
         </div>
       </section>
     </div>

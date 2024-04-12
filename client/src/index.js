@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/rootReducer";
-import Header from "./components/Header";
 
 
 const store = createStore(rootReducer);
@@ -16,7 +15,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-      <Header />
+
+        <img src="./assets/logo.png" alt="logo" width="150px" style={{position: "absolute", right: "35px", top: "20px"}}/>
+        
         <App />
       </Provider>
     </BrowserRouter>

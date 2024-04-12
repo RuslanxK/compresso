@@ -13,9 +13,7 @@ import { useDispatch } from "react-redux";
 import Switch from "react-switch";
 import { useState, useRef } from "react";
 
-
-
-const Files = (props) => {
+const Files = () => {
   const [settingShow, setSettingShow] = useState(false);
   const [webpSetting, setWebpSetting] = useState(false);
   const [displayPopup, setDisplayPopup] = useState(false)
@@ -108,7 +106,7 @@ const Files = (props) => {
             icon={icon({ name: "check", style: "solid" })}
           />
         </div>
-        <img src={file.image} width={55} height={55} />
+        <img src={file.image} width={55} height={55} alt="file" />
 
         <div className="picDiv-details">
           <FontAwesomeIcon

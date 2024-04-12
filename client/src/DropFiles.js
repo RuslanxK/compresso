@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const DropFiles = (props) => {
+const DropFiles = () => {
   const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ const DropFiles = (props) => {
       animationData: require("./loading.json"),
     });
   }, [loading]);
+
 
   const resizeFile = (file) =>
     new Promise((resolve) => {
@@ -73,6 +74,7 @@ const DropFiles = (props) => {
     });
 
   let compressedArray = [];
+
 const convertToWebp = (file) => {};  
 const { getRootProps, isDragActive, isDragReject } = useDropzone({
     accept: {
@@ -202,7 +204,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-        <button>בחירת קבצים</button>
+        <button onClick={() => getRootProps()}>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
