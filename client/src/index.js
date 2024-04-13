@@ -16,7 +16,7 @@ root.render(
     <BrowserRouter>
       <Provider store={store}>
 
-        <img src="./logo.png" alt="logo" width="150px" style={{position: "absolute", right: "35px", top: "20px"}}/>
+        <img id="logo" src="./logo.png" alt="logo" width="150px"/>
         
         <App />
       </Provider>

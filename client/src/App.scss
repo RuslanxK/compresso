@@ -41,46 +41,16 @@ html {
   align-items: center;
 }
 
-.header {
-  height: 100px;
-  @include flexBox();
-  justify-content: space-between;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1200px;
 
-  .nav {
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    column-gap: 40px;
+ 
 
-    a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
 
-    a:hover {
-      color: $primary;
-    }
-  }
+#logo {
 
-  .header-button-div {
-    text-align: center;
+    position: absolute;
+    right: 35px;
+    top: 10px;
 
-    button {
-      @include button();
-      color: white;
-      margin-left: 10px;
-    }
-
-    #noBGbtn {
-      background: none;
-      color: $primary;
-    }
-  }
 }
 
 .main-component {
@@ -172,54 +142,43 @@ html {
 
 
 @media only screen and (max-width: 767px) {
-  .header {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+  
 
-    img {
-      width: 120px;
-    }
-    .nav {
-      display: flex;
-      flex-direction: column;
-      width: 70px;
-    }
+  #logo {
+
+     position: relative;
+    
   }
 
   .main-component {
-    height: auto !important;
-    width: auto !important;
-    background-image: none !important;
-    background-color: white;
-
+    height: auto;
+    padding: 0px;
+  
     .hero {
-      width: auto !important;
+      width: auto;
       display: flex;
       flex-direction: column;
       background-position: center;
-      height: auto !important;
+      height: auto;
     }
 
     .drop-section {
-      width: 435px;
-      margin: 25px;
-      padding: 10px;
+      width: 100%;
     }
 
     .files-section {
-      padding: 25px;
-
+     
+           width: 100%;
       p {
-        padding-left: 50px;
+       
       }
 
       .files {
-        width: 435px !important;
+        width: 100%;
       }
 
       .file-name {
-        font-size: 12px !important;
+        font-size: 12px;
       }
 
       .compressInfo-span {
@@ -245,16 +204,10 @@ html {
   }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1040px) {
-  .header {
-    width: auto;
-    padding-left: 25px;
-    padding-right: 25px;
 
-    img {
-      width: 150px;
-    }
-  }
+
+@media only screen and (min-width: 767px) and (max-width: 1040px) {
+ 
 
   .main-component {
     height: auto !important;
