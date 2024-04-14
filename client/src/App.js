@@ -6,10 +6,15 @@ import "./fonts/Birzia-Medium.woff";
 import "./fonts/Birzia-Bold.woff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used\
+import { useSelector } from "react-redux";
 
 const App = () => {
+
   const [dataPic, setDataPic] = useState([]);
   const [switcherValue, setSwitcherValue] = useState(false);
+
+  const images = useSelector((state) => state.images);
+
 
   const data = (pictures) => {
     setDataPic(pictures);
@@ -23,7 +28,7 @@ const App = () => {
     <section className="main">
     
 
-          <div style={{width: "100%"}}>
+          <div className={ images.length ? null:  "showFiles" } style={{width: "100%"}}>
           <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
           </div>
           <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
