@@ -120,9 +120,8 @@ $secondery: #111111;
     }
 
     .check-icon-div {
-      height: 60px;
-      margin-right: -10px;
-      z-index: 5;
+     
+      width: auto !important;
     }
 
     .icon {
@@ -130,8 +129,8 @@ $secondery: #111111;
       color: white;
       border-radius: 100%;
       padding: 2px;
-      font-size: 13px;
-      margin-left: 4px;
+      font-size: 12px;
+      
     }
 
     .download-icon, .pencil-icon {
@@ -302,17 +301,20 @@ button {
    }
 
 
-   .file-d {
-        
    
-    width: auto;
-    
-  }
 
   .file-percentage {
 
     padding-left: 0px !important;
 
 }
+
+
+  .picDiv {
+
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
 
 }
