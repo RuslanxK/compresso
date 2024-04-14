@@ -80,7 +80,7 @@ const DropFiles = () => {
 
 const convertToWebp = (file) => {};  
 
-const { getRootProps, isDragActive, isDragReject, open } = useDropzone({ 
+const { getRootProps, isDragActive, isDragReject, open, getInputProps } = useDropzone({ 
   
     noClick: true,
     accept: {
@@ -219,7 +219,7 @@ const { getRootProps, isDragActive, isDragReject, open } = useDropzone({
             <span>את כל הקבצים</span>
           </div>
         )}
-
+        <input {...getInputProps()} />
         <button onClick={open}>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
