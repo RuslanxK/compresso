@@ -5,6 +5,10 @@ import { BrowserRouter } from "react-router-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/rootReducer";
+import "./App.scss";
+import "./Files.scss"
+import "./DropFiles.scss"
+
 
 
 const store = createStore(rootReducer);

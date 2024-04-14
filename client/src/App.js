@@ -1,4 +1,3 @@
-import "./App.scss";
 import Files from "./Files";
 import DropFiles from "./DropFiles";
 import { useState } from "react";
