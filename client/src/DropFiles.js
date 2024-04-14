@@ -18,7 +18,6 @@ const DropFiles = () => {
   const dispatch = useDispatch();
 
   const settings = useSelector((state) => state.settings);
-  const dropzoneRef = useRef(null);
   const container = useRef(null);
 
   useEffect(() => {
@@ -187,13 +186,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
 
 
 
-  const handleButtonClick = () => {
-    // Manually trigger getRootProps on mobile devices
-    const rootProps = getRootProps();
-    if (rootProps.onClick) {
-      rootProps.onClick();
-    }
-  };
+
 
 
   return (
@@ -225,14 +218,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-<input
-            ref={dropzoneRef}
-            type="file"
-            accept="image/jpeg, image/png, image/webp"
-            style={{ display: "none" }}
-          />
-
-        <button onClick={handleButtonClick}>בחירת קבצים</button>
+        <button onClick={() => getRootProps()}>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
