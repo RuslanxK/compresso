@@ -181,6 +181,8 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
   });
 
   return (
+
+    <section className="main-drop-section">
     <div className="drop-section">
       <div className="border" {...getRootProps()}>
         {isDragActive ? (
@@ -204,12 +206,13 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-        <button onClick={() => getRootProps()}>בחירת קבצים</button>
+        <button>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
       </div>
     </div>
+    </section>
   );
 };
 

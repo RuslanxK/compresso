@@ -21,36 +21,12 @@ const App = () => {
   };
 
   return (
-    <div className="main-component">
-
-  
-      <section className="hero">
-        <div className="left-div">
+    <section className="main">
+    
           <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
-
-          <div className="why-compress">
-            <div className="why-icon">
-              <FontAwesomeIcon
-                className="icon-question"
-                icon={icon({ name: "circle-question", style: "solid" })}
-              />
-            </div>
-            <div className="why-text">
-              <h2>למה חשוב לדחוס קבצים?</h2>
-              <p>
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום
-                דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון
-                ניבאה. דס איאקוליס וולופטה דיאם.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="right-div">
           <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
-        </div>
-      </section>
-    </div>
+    
+    </section>
   );
 };
 

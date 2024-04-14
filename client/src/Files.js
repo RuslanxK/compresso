@@ -100,14 +100,12 @@ const Files = () => {
 
     return (
       <div className="picDiv" key={index}>
-        <div className="check-icon-div">
-          <FontAwesomeIcon
-            className="icon"
-            icon={icon({ name: "check", style: "solid" })}
-          />
-        </div>
-        <img src={file.image} width={50} height={40} alt="file" />
 
+        <div className="check-icon-div">
+          <FontAwesomeIcon className="icon" icon={icon({ name: "check", style: "solid" })}/>
+         <img src={file.image} width={50} height={40} alt="file" />
+        </div>
+        
         <div className="picDiv-details">
           <FontAwesomeIcon
             className="pencil-icon"
@@ -116,7 +114,7 @@ const Files = () => {
 
               setDisplayPopup(true)
               setAddAltImage(file.name)
-              console.log(file)
+              
             }}/>
 
                
@@ -166,7 +164,7 @@ const Files = () => {
         <h1>דוחס הקבצים <span className="secondary-title">המקצועי ביותר</span> </h1>
         <p>
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו
-          צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. לורם איפסום דולור סיט אמט,
+          צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק.<br /> לורם איפסום דולור סיט אמט,
           קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים.
         </p>
       </div>
