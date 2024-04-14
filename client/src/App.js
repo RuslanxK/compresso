@@ -24,6 +24,17 @@ const App = () => {
     
           <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
           <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
+
+          <div className="files-section" id="files-section-main">
+       <div className="texts">
+        <h1>דוחס הקבצים <br /><span className="secondary-title">המקצועי ביותר</span> </h1>
+        <p>
+          לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו
+          צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק.<br /> לורם איפסום דולור סיט אמט,
+          קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים.
+        </p>
+       </div>
+       </div>
     
     </section>
   );

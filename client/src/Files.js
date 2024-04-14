@@ -160,7 +160,7 @@ const Files = () => {
 
   return (
     <div className="files-section">
-      <div className="texts">
+      <div className="texts" id="files-section-for-desktop">
         <h1>דוחס הקבצים <br /><span className="secondary-title">המקצועי ביותר</span> </h1>
         <p>
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו
