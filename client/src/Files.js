@@ -79,24 +79,32 @@ const Files = () => {
   const compressedPics = images.map((file, index) => {
     const getPercentageChange = (oldNumber, newNumber) => {
       var decreaseValue = oldNumber - newNumber;
-
       return (decreaseValue / oldNumber) * 100;
     };
-
+  
     const decreasedPercentage = getPercentageChange(
       file.prevSize,
       file.currentSize
     ).toFixed(1);
-   
-    const name = file.name.substring(0, 12);
+  
+    let name = file.name;
+    if (file.name.length > 12) {
+    name = `${file.name.substring(0, 12)}...`;
+  }
+    let prevSizeDisplay, currentSizeDisplay;
+  
+    if (file.prevSize >= 1000000) {
+      prevSizeDisplay = `${(file.prevSize / 1048576).toFixed(2)} MB`;
+    } else {
+      prevSizeDisplay = `${(file.prevSize / 1024).toFixed(2)} KB`;
+    }
+  
+    if (file.currentSize >= 1000000) {
+      currentSizeDisplay = `${(file.currentSize / 1048576).toFixed(2)} MB`;
+    } else {
+      currentSizeDisplay = `${(file.currentSize / 1024).toFixed(2)} KB`;
+    }
 
-    const getPrevSizeBig = file.prevSize / 1048576;
-    const getPrevSizeSmall = file.prevSize / 1024;
-    const getPrevFixedB = getPrevSizeBig.toFixed(2);
-    const getPrevFixedS = getPrevSizeSmall.toFixed(2);
-
-    const getCurrentSize = file.currentSize / 1024;
-    const getCurrentFixed = getCurrentSize.toFixed(2);
 
     return (
       <div className="picDiv" key={index}>
@@ -126,14 +134,12 @@ const Files = () => {
 
           <span className="file-percentage">{`${decreasedPercentage}%-`}</span>
           <div className="file-d">
-            <span className="file-name">...{name}</span>
+            <span className="file-name">{name}</span>
             <span className="compressInfo-span">
-              {file.prevSize.toString().length < 7
-                ? `${getPrevFixedS}kB`
-                : `${getPrevFixedB}Mb`}
-              &#8594;{" "}
-              <span className="compressedImgSize">{`${getCurrentFixed}kB`}</span>
-            </span>
+            {prevSizeDisplay} &#8594;
+            <span className="compressedImgSize"> {currentSizeDisplay}</span>
+          </span>
+            
           </div>
         </div>
       </div>

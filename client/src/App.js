@@ -22,7 +22,10 @@ const App = () => {
   return (
     <section className="main">
     
+
+          <div style={{width: "100%"}}>
           <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
+          </div>
           <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
 
           <div className="files-section" id="files-section-main">

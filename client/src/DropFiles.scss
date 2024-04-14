@@ -155,22 +155,25 @@ $secondery: #111111;
       .file-name {
         color: #959595;
         font-size: 14px;
-        padding-left: 20px;
         display: flex;
         align-items: center;
+        direction: ltr;
       }
 
       .file-d {
-        text-align: center;
+        
+        direction: ltr;
+        width: 140px;
+        
       }
 
       .file-percentage {
         color: #b4b4b4;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
         display: flex;
-        align-items: center;
-        padding-left: 130px;
+        align-items:flex-start;
+        padding-left: 100px;
       }
     }
   }
