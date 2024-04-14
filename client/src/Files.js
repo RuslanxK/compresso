@@ -142,6 +142,7 @@ const Files = () => {
     );
   });
 
+
   const handleValueChange = (e) => {
     if (e.target.name === "resolution") {
       dispatch(getResValue(e.target.value));
@@ -261,7 +262,7 @@ const Files = () => {
           </div>
         </div>
       </div>
-      <div className="files">{compressedPics}
+      <div className="files" style={compressedPics.length >= 3 ? {overflowY: "scroll"} : null }>{compressedPics}
 
       </div>
       

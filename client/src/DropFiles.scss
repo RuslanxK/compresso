@@ -1,4 +1,7 @@
-@import "./styleUtils.scss";
+
+$primary: #0080FF;
+$secondery: #111111;
+
 
 .drop-section {
   width: 600px;
@@ -82,6 +85,8 @@
 }
 
 .files-section {
+
+ 
   .files {
     display: flex;
     flex-direction: column;
