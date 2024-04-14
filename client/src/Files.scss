@@ -22,8 +22,7 @@ $secondery: #111111;
       font-size: 50px;
       line-height: 1em;
       font-family: bold;
-      width: 400px;
-
+      
       .secondary-title {
         color: $primary;
         font-family: bold;
@@ -35,6 +34,7 @@ $secondery: #111111;
       font-size: 14px;
       color: #6e6e6e;
       font-family: light;
+      width: 100%;
      
     }
   }
@@ -141,6 +141,8 @@ $secondery: #111111;
   .files-section {
 
      width: 100%;
+     padding: 0px;
+     margin-bottom: 40px;
 
     .texts {
       
@@ -151,7 +153,7 @@ $secondery: #111111;
         line-height: 1em;
         text-align: center;
         font-family: bold;
-        width: auto;
+        width: 100%;
   
         .secondary-title {
           color: $primary;
@@ -165,6 +167,7 @@ $secondery: #111111;
         color: #6e6e6e;
         font-family: light;
         text-align: center;
+        width: 100%;
        
       }
     }
