@@ -81,11 +81,7 @@ const DropFiles = () => {
 const convertToWebp = (file) => {};  
 
 const { getRootProps, isDragActive, isDragReject } = useDropzone({
-    accept: {
-      "image/jpeg": [],
-      "image/png": [],
-      "image/webp": [],
-    },
+    accept: "image/jpg,image/png",
     onDrop: (acceptedFiles) => {
       if (isDragReject) {
         toast("רק קבצי JPG ו-PNG בבקשה!", {
@@ -218,7 +214,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-        <button onClick={() => getRootProps()}>בחירת קבצים</button>
+        <button>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
