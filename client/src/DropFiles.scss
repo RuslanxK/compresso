@@ -116,11 +116,13 @@ $secondery: #111111;
     border-bottom: 1px solid #e1e3e6;
     width: 100%;
 
+
     #file-pic {
       border-radius: 5px;
       width: 45px;
       height: 35px;
       object-fit: cover;
+     
     }
 
     
@@ -165,7 +167,9 @@ $secondery: #111111;
       .file-d {
         
         direction: ltr;
-        width: 140px;
+        width: 135px;
+        
+       
         
       }
 
@@ -324,10 +328,9 @@ button {
     
   }
 
+   .file-d {
 
-  #file-pic {
-
-     margin-right: 5px !important;
-  }
+    margin-right: -5px !important;
+   }
 
 }
