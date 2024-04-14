@@ -154,13 +154,43 @@ html {
   h1 {
 
       font-size: 35px !important;
+      text-align: center;
   }
+
+ p {
+
+    text-align: center;
+ }
   
+
+ .settings {
+
+  display: flex;
+  justify-content: center;
+
+ }
+
+
+
+ .left-div {
+
+    width: 100% !important;
+   
+    .files-section {
+
+       width: 100% !important;
+    }
+ }
+
+ .right-div {
+
+    width: 100% !important;
+ }
 
   .main-component {
     height: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0px;
+    
   
     .hero {
       width: auto;
@@ -171,24 +201,6 @@ html {
     }
 
 
-    .drop-section {
-
-        width: 400px;
-    }
-    
-   
-
-    .files-section {
-     
-           width: 100%;
-      p {
-       
-      }
-
-      .files {
-        width: 100%;
-        
-      }
 
       .file-name {
         font-size: 12px;
@@ -209,13 +221,23 @@ html {
       }
     }
 
-    .why-compress {
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-bottom: 25px;
+
+     .files-section {
+
+       width: auto !important;
+     }
+
+
+    .picDiv-details {
+      display: flex;
+      justify-content: space-between;
+      width:auto !important;
+      align-items:center;
+
     }
+
   }
-}
+
 
 
 

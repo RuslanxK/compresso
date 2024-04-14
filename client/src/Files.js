@@ -106,7 +106,7 @@ const Files = () => {
             icon={icon({ name: "check", style: "solid" })}
           />
         </div>
-        <img src={file.image} width={55} height={55} alt="file" />
+        <img src={file.image} width={50} height={40} alt="file" />
 
         <div className="picDiv-details">
           <FontAwesomeIcon
@@ -163,10 +163,7 @@ const Files = () => {
   return (
     <div className="files-section">
       <div className="texts">
-        <h1>
-          דוחס הקבצים <br />
-          <span className="secondary-title">המקצועי ביותר</span>{" "}
-        </h1>
+        <h1>דוחס הקבצים <span className="secondary-title">המקצועי ביותר</span> </h1>
         <p>
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו
           צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. לורם איפסום דולור סיט אמט,
