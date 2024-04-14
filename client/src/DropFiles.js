@@ -222,7 +222,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-        <button onClick={handleButtonClick}>בחירת קבצים</button>
+        <button onClick={handleButtonClick} onTouchStart={handleButtonClick}>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
