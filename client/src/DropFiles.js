@@ -30,6 +30,7 @@ const DropFiles = () => {
 
 
   const resizeFile = (file) =>
+
     new Promise((resolve) => {
       if (file.type.includes("png")) {
         Resizer.imageFileResizer(
@@ -73,9 +74,13 @@ const DropFiles = () => {
       }
     });
 
+
+
   let compressedArray = [];
 
+
 const convertToWebp = (file) => {};  
+
 const { getRootProps, isDragActive, isDragReject } = useDropzone({
     accept: {
       "image/jpeg": [],
@@ -180,6 +185,14 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
     },
   });
 
+
+
+  const handleButtonClick = () => {
+    getRootProps(); 
+  
+  };
+
+
   return (
 
     <section className="main-drop-section">
@@ -209,7 +222,7 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
           </div>
         )}
 
-        <button>בחירת קבצים</button>
+        <button onClick={handleButtonClick}>בחירת קבצים</button>
         <span>עד 20 קבצים במשקל כולל של 25 mb כל אחד</span>
         {loading ? <div className="container" ref={container}></div> : null}
         <ToastContainer />
