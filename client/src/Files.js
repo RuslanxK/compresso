@@ -263,7 +263,7 @@ const Files = () => {
           </div>
         </div>
       </div>
-      <div className="files" style={compressedPics.length >= 3 ? {overflowY: "scroll"} : null }>{compressedPics}
+      <div className="files" style={compressedPics.length >= 4 ? {overflowY: "scroll"} : null }>{compressedPics}
 
       </div>
       
