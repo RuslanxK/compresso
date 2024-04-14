@@ -115,7 +115,7 @@ const Files = () => {
        
         
         <div className="picDiv-details">
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             className="pencil-icon"
             icon={icon({ name: "pencil", style: "solid" })}
             onClick={() => {
@@ -123,7 +123,7 @@ const Files = () => {
               setDisplayPopup(true)
               setAddAltImage(file.name)
               
-            }}/>
+            }}/> */}
 
                
           <FontAwesomeIcon
