@@ -147,14 +147,20 @@ html {
   
 
   #logo {
-
      position: relative;
-    
   }
+
+
+  h1 {
+
+      font-size: 35px !important;
+  }
+  
 
   .main-component {
     height: auto;
-    padding: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
   
     .hero {
       width: auto;
@@ -164,9 +170,13 @@ html {
       height: auto;
     }
 
+
     .drop-section {
-      width: 100%;
+
+        width: 400px;
     }
+    
+   
 
     .files-section {
      
@@ -177,6 +187,7 @@ html {
 
       .files {
         width: 100%;
+        
       }
 
       .file-name {
@@ -238,9 +249,7 @@ html {
       width: 500px !important;
     }
 
-    .drop-section {
-      width: 500px !important;
-    }
+    
 
     .why-compress {
       width: auto;
