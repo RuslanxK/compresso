@@ -183,7 +183,10 @@ const { getRootProps, isDragActive, isDragReject } = useDropzone({
   return (
 
     <section className="main-drop-section">
+
+      
     <div className="drop-section">
+      
       <div className="border" {...getRootProps()}>
         {isDragActive ? (
           <div className="head-texts">

@@ -111,8 +111,15 @@ html {
 
     .main {
 
-       flex-direction: column-reverse;
-    }
+       flex-direction: column;
+       padding-left: 25px;
+       padding-right: 25px;
+       justify-content: center;   
+       align-items: center;
+       height: 100%;
+       margin-top: 75px;
+      
+      }
 
     
   }
@@ -123,6 +130,11 @@ html {
 @media only screen and (min-width: 767px) and (max-width: 1040px) {
  
 
- 
+  .main {
+
+    flex-direction: column;
+    padding-left: 35px;
+    padding-right: 35px;
+ }
 
 }

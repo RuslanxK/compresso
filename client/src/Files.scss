@@ -133,3 +133,49 @@ $secondery: #111111;
     display: block;
   }
 }
+
+
+
+@media only screen and (max-width: 767px) {
+  
+
+  .files-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+   
+    
+    .texts {
+      
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      color: $secondery;
+  
+      h1 {
+        font-size:35px;
+        line-height: 1em;
+        text-align: center;
+        font-family: bold;
+        width: auto;
+  
+        .secondary-title {
+          color: $primary;
+          font-family: bold;
+         
+        }
+      }
+  
+      p {
+        font-size: 14px;
+        color: #6e6e6e;
+        font-family: light;
+        text-align: center;
+       
+      }
+    }
+
+  
+  }
+}
