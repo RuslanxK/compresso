@@ -315,6 +315,7 @@ button {
 
   .icon {
     font-size: 9px !important;
+  
   }
 
 
@@ -331,4 +332,9 @@ button {
       padding-right: 15px !important;
   }
 
+
+    .picDiv .icon {
+
+        margin-left: -10px;
+    }
 }
