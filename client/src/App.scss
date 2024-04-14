@@ -136,6 +136,24 @@ html {
     display: none;
  }
 
+
+ .toast-message-success {
+  color: $primary !important;
+  font-size: 15px !important;
+  width: 100%;
+  text-align: center;
+
+ }
+
+ .toast-message-error {
+  color: red !important;
+  font-size: 15px !important;
+  width: 100%;
+  text-align: center;
+
+
+ }
+
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1040px) {
