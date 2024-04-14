@@ -109,10 +109,10 @@ const Files = () => {
     return (
       <div className="picDiv" key={index}>
 
-        <div className="check-icon-div">
+       
           <FontAwesomeIcon className="icon" icon={icon({ name: "check", style: "solid" })}/>
          <img id="file-pic" src={file.image} alt="file" />
-        </div>
+       
         
         <div className="picDiv-details">
           <FontAwesomeIcon
