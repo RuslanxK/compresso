@@ -111,7 +111,7 @@ const Files = () => {
 
         <div className="check-icon-div">
           <FontAwesomeIcon className="icon" icon={icon({ name: "check", style: "solid" })}/>
-         <img src={file.image} width={50} height={40} alt="file" />
+         <img id="file-pic" src={file.image} alt="file" />
         </div>
         
         <div className="picDiv-details">
