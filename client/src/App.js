@@ -7,11 +7,13 @@ import "./fonts/Birzia-Bold.woff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used\
 import { useSelector } from "react-redux";
+import { useEffect, useRef} from "react";
 
 const App = () => {
 
   const [dataPic, setDataPic] = useState([]);
   const [switcherValue, setSwitcherValue] = useState(false);
+  const showFilesRef = useRef(null);
 
   const images = useSelector((state) => state.images);
 
@@ -24,11 +26,18 @@ const App = () => {
     setSwitcherValue(switcher);
   };
 
+
+  useEffect(() => {
+    if (showFilesRef.current) {
+      showFilesRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [images]);
+
   return (
     <section className="main">
     
 
-          <div className={ images.length ? null:  "showFiles" } style={{width: "100%"}}>
+          <div ref={showFilesRef} className={ images.length ? null:  "showFiles" } style={{width: "100%"}}>
           <Files pictures={dataPic} webpCallBack={handleSwitcherCallBack}></Files>
           </div>
           <DropFiles switcherValue={switcherValue} callback={data}></DropFiles>
