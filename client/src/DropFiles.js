@@ -6,6 +6,7 @@ import { useDropzone } from "react-dropzone";
 
 import { useState, useEffect, useRef } from "react";
 import Resizer from "react-image-file-resizer";
+
 import Lottie from "lottie-web";
 import { addImage } from "./redux/actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,49 +30,51 @@ const DropFiles = () => {
 
 
   const resizeFile = (file) =>
-
-    new Promise((resolve) => {
-      if (file.type.includes("png")) {
-        Resizer.imageFileResizer(
-          file,
-          settings.resolution,
-          settings.resolution,
-          "png",
-          settings.quality,
-          0,
-          (uri) => {
-            resolve(uri);
-          },
-          "blob"
-        );
-      } else if (file.type.includes("jpg") || file.type.includes("jpeg")) {
-        Resizer.imageFileResizer(
-          file,
-          settings.resolution,
-          settings.resolution,
-          "jpeg",
-          settings.quality,
-          0,
-          (uri) => {
-            resolve(uri);
-          },
-          "blob"
-        );
-      } else if (file.type.includes("webp")) {
-        Resizer.imageFileResizer(
-          file,
-          settings.resolution,
-          settings.resolution,
-          "webp",
-          settings.quality,
-          0,
-          (uri) => {
-            resolve(uri);
-          },
-          "blob"
-        );
-      }
-    });
+  new Promise((resolve) => {
+    if (file.type.includes("png")) {
+      Resizer.imageFileResizer(
+        file,
+        settings.resolution,
+        settings.resolution,
+        "png",
+        settings.quality,
+        0,
+        (uri) => {
+          resolve(uri);
+        },
+        "blob"
+      );
+    } else if (file.type.includes("jpg") || file.type.includes("jpeg")) {
+      Resizer.imageFileResizer(
+        file,
+        settings.resolution,
+        settings.resolution,
+        "jpeg",
+        settings.quality,
+        0,
+        (uri) => {
+          resolve(uri);
+        },
+        "blob"
+      );
+    } else if (file.type.includes("webp")) {
+      Resizer.imageFileResizer(
+        file,
+        settings.resolution,
+        settings.resolution,
+        "webp",
+        settings.quality,
+        0,
+        (uri) => {
+          resolve(uri);
+        },
+        "blob"
+      );
+    } else {
+      // Handle unsupported file types
+      resolve(null);
+    }
+  });
 
 
 
