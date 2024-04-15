@@ -55,17 +55,20 @@ const Files = () => {
     if (images.length) {
       const JSZip = require("jszip");
       const zip = new JSZip();
-      const img = zip.folder("images");
-
-      images.forEach(async (item) => {
+      
+      const imgFolder = zip.folder("images"); 
+      
+      images.forEach(async (item, index) => {
         const imageBlob = await fetch(item.image).then((response) =>
           response.blob()
         );
-
-        const imgData = new File([imageBlob], item.name + "." + item.type);
-        img.file(imgData.name, imgData, { base64: true });
+        
+        const imgName = `${item.name}_${index}.${item.type}`;
+        
+        const imgData = new File([imageBlob], imgName);
+        imgFolder.file(imgName, imgData, { base64: true });
       });
-
+      
       setTimeout(() => {
         zip.generateAsync({ type: "blob" }).then(function (content) {
           saveAs(content, "CompressedFiles.zip");
@@ -75,6 +78,7 @@ const Files = () => {
       console.log("No Data");
     }
   };
+  
 
   const compressedPics = images.map((file, index) => {
     const getPercentageChange = (oldNumber, newNumber) => {
