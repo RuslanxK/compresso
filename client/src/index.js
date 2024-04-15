@@ -8,10 +8,12 @@ import rootReducer from "./redux/rootReducer";
 import "./App.scss";
 import "./Files.scss"
 import "./DropFiles.scss"
-import { disableReactDevTools }  from '@fvilers/disable-react-devtools'
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
 
-if(process.env.NODE_ENV === "production") disableReactDevTools()
+if (process.env.NODE_ENV === 'production') {
+  disableReactDevTools();
+}
 
 const store = createStore(rootReducer);
 
