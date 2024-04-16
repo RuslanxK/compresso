@@ -22,9 +22,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-
-        <img id="logo" src="./logo.png" alt="logo" width="150px"/>
-        
         <App />
       </Provider>
     </BrowserRouter>
