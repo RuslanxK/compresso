@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
 
-       <img id="logo" src="./logo.png" alt="logo" width="150px"/>
+       <img id="logo" src={process.env.PUBLIC_URL + '/logo.png'} alt="logo" width="150px"/>
 
        <Routes>
         <Route path="/" element={<Main />} />

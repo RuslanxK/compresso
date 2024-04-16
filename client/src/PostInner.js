@@ -15,14 +15,24 @@ const PostInner = () => {
             setPost(data)
         }
          getPost()
-     }, []);
+     }, [id]);
 
 
   return (
     <div className='innerPost'>
     
-      {post.title}
-      {post.content}
+     <div className='bg-image'>
+      
+ 
+     </div>
+
+     <div className='innerPost-content'>
+
+     <h2>{post.title}</h2>
+     <p>{post.content}</p>
+      
+     </div>
+     
 
     </div>
   )
