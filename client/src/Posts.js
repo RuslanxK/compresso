@@ -16,7 +16,7 @@ const Posts = () => {
     }, []);
 
 
-    const postsData = posts.map((post) => {
+    const postsData = posts?.map((post) => {
 
          return <Post key={post._id} postData={post} />
     })
