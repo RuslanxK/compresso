@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-const InnerPost = () => {
+const PostInner = () => {
 
     const { id } = useParams()
 
@@ -28,4 +28,4 @@ const InnerPost = () => {
   )
 }
 
-export default InnerPost
+export default PostInner

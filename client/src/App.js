@@ -2,7 +2,7 @@ import React from 'react'
 import Main from './Main'
 import { Routes, Route } from "react-router-dom";
 import Posts from './Posts';
-import InnerPost from './InnerPost';
+import PostInner from "./PostInner"
 
 const App = () => {
 
@@ -16,7 +16,7 @@ const App = () => {
        <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/posts" element={<Posts />} />
-        <Route path="/post/:id" element={<InnerPost />} />
+        <Route path="/post/:id" element={< PostInner />} />
       </Routes>
 
     </div>
