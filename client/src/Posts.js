@@ -39,6 +39,8 @@ const Posts = () => {
 
        <div className='posts'>
               {postsData}
+
+
        </div>
 
     </div>
