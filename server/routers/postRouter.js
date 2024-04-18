@@ -36,22 +36,31 @@ router.get("/post/:id", async (req, res) => {
 
 
 
-router.post("/posts", async (req, res) =>{
-
-    const { title, content } = req.body;
-
-    const Post = new post({
-    title,
-    content,
-    });
+router.post("/posts", async (req, res) => {
   
-    try {
+  const { title, content } = req.body;
+
+  const Post = new post({
+      title,
+      content,
+  });
+
+  try {
       const response = await Post.save();
       res.status(200).json(response);
-    } catch (error) {
+  } catch (error) {
       console.log(error);
       res.status(500).json(error);
-    }
+  }
+})
+
+
+
+router.post("/upload", async (req, res) => {
+
+  console.log(req.files)
+  res.status(200).json("Uploaded")
+
 })
 
 
