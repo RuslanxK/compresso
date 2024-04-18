@@ -54,7 +54,7 @@ html {
   background-image: url("../public/bg.png");
   background-size: contain;
   background-position: left;
-  background-position-y: top;
+  background-position-y: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
@@ -206,7 +206,7 @@ html {
     width: 100%;
     padding-left: 25px;
     padding-right: 25px;
-    background-size: 150px;
+    background-size: 250px;
   }
 
   #logo {
