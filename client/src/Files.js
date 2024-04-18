@@ -98,15 +98,15 @@ const Files = () => {
     let prevSizeDisplay, currentSizeDisplay;
   
     if (file.prevSize >= 1000000) {
-      prevSizeDisplay = `${(file.prevSize / 1048576).toFixed(2)} MB`;
+      prevSizeDisplay = `${(file.prevSize / 1048576).toFixed(1)} MB`;
     } else {
-      prevSizeDisplay = `${(file.prevSize / 1024).toFixed(2)} KB`;
+      prevSizeDisplay = `${(file.prevSize / 1024).toFixed(1)} KB`;
     }
   
     if (file.currentSize >= 1000000) {
       currentSizeDisplay = `${(file.currentSize / 1048576).toFixed(2)} MB`;
     } else {
-      currentSizeDisplay = `${(file.currentSize / 1024).toFixed(2)} KB`;
+      currentSizeDisplay = `${(file.currentSize / 1024).toFixed(1)} KB`;
     }
 
 
