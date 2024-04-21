@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import { postImages } from "./images";
 
-const Post = ({ postData }) => {
+const Post = ({ postData, posts }) => {
 
   const navigate = useNavigate();
+
+const [img, setImg] = useState("")
+
+
+useEffect(() => {
+  
+  const foundImage = postImages.find(image => image.id === postData._id);
+  if (foundImage) {
+  
+    setImg(foundImage.src);
+  } else {
+  
+    setImg(""); 
+  }
+}, [postData]);
+
+  
 
   const truncatedTitle =
     postData.title.length > 15
@@ -21,7 +39,10 @@ const Post = ({ postData }) => {
 
   return (
     <div className="post" onClick={navigateToPost}>
-      <img src="./placeholder.webp" width="100%" alt="post" />
+    
+        <img src={img} width="100%" alt="img" />
+    
+
       <h3>{truncatedTitle}</h3>
       <p>{truncatedContent}</p>
     </div>

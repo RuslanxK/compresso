@@ -1,24 +1,25 @@
 const express = require("express");
 const router = express.Router();
-const post = require("../models/postModel")
+const post = require("../models/postModel");
+
+
 
 
 router.get("/posts", async (req, res) => {
-
   try {
     const posts = await post.find();
     res.status(200).json(posts);
   } catch (error) {
     console.error("Error fetching posts:", error);
-    res.status(error.status || 500).json({ error: error.message || "Internal Server Error" });
+    res
+      .status(error.status || 500)
+      .json({ error: error.message || "Internal Server Error" });
   }
 });
 
 
 
-
 router.get("/post/:id", async (req, res) => {
-
   const id = req.params.id;
 
   try {
@@ -37,37 +38,24 @@ router.get("/post/:id", async (req, res) => {
 
 
 router.post("/posts", async (req, res) => {
-  
+
+
   const { title, content } = req.body;
 
   const Post = new post({
-      title,
-      content,
+    title,
+    content,
   });
 
   try {
-      const response = await Post.save();
-      res.status(200).json(response);
+    const response = await Post.save();
+    res.status(200).json(response);
   } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
+    console.log(error);
+    res.status(500).json(error);
   }
-})
+});
 
-
-
-router.post("/upload", async (req, res) => {
-
-  console.log(req.files)
-  res.status(200).json("Uploaded")
-
-})
-
-
-
-  
 
 
 module.exports = router;
-
-

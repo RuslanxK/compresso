@@ -19,6 +19,7 @@
     "btrz-base64-encoder": "^1.2.0",
     "compressorjs": "^1.1.1",
     "file-saver": "^2.0.5",
+    "imagefrombuffer": "^1.0.12",
     "jszip": "^3.10.1",
     "jszip-utils": "^0.1.0",
     "lottie-react": "^2.3.1",

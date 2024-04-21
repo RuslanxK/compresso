@@ -18,7 +18,7 @@ const Posts = () => {
 
     const postsData = posts?.map((post) => {
 
-         return <Post key={post._id} postData={post} />
+         return <Post key={post._id} postData={post} posts={posts} />
     })
 
   return (
@@ -26,7 +26,7 @@ const Posts = () => {
     <div className='posts-main'>
         
         <div className="texts">
-        <h1>דולור <span className="secondary-title"> לורם איפסום </span> </h1>
+        <h1>דולור <span className="secondary-title" onClick={() => console.log(posts)}> לורם איפסום </span> </h1>
         <p>
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו
           צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק.<br /> לורם איפסום דולור סיט אמט,
