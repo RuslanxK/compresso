@@ -8,26 +8,28 @@ const PostInner = () => {
 
     const [post, setPost] = useState({})
 
+    const img = localStorage.getItem("img");
 
     useEffect(() => {
         const getPost = async () => {
             const { data } = await axios.get(`${process.env.REACT_APP_POSTS_API}/post/${id}`)
             setPost(data)
-        }
-         getPost()
-     }, [id]);
+          
+            }
+               getPost()
 
+           }, [id]);
+
+
+     
 
   return (
     <div className='innerPost'>
     
-     <div className='bg-image'>
-      
- 
-     </div>
+     <img src={img} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
 
      <div className='innerPost-content'>
-
+ 
      <h2>{post.title}</h2>
      <p>{post.content}</p>
       

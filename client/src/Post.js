@@ -21,6 +21,10 @@ useEffect(() => {
   }
 }, [postData]);
 
+
+
+ console.log(img)
+
   
 
   const truncatedTitle =
@@ -34,6 +38,8 @@ useEffect(() => {
 
       
   const navigateToPost = () => {
+
+    localStorage.setItem("img", img);
     navigate(`/post/${postData._id}`);
   };
 
