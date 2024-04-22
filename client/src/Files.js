@@ -221,7 +221,7 @@ const Files = () => {
               onChange={handleValueChange}
               type="text"
               name="resolution"
-              placeholder="4000"
+              placeholder="1920"
               defaultValue={`${
                 localStorage.getItem("resolution")
                   ? `${localStorage.getItem("resolution")}`

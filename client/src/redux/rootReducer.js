@@ -2,7 +2,7 @@
 const initialStore = {
   images: [],
   settings: {
-    resolution: localStorage.getItem('resolution') ? `${localStorage.getItem('resolution')}` : '4000',
+    resolution: localStorage.getItem('resolution') ? `${localStorage.getItem('resolution')}` : '1920',
     quality: localStorage.getItem('quality') ? `${localStorage.getItem('quality')}` : '70',
     webp: false
   }

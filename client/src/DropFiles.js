@@ -26,6 +26,9 @@ const DropFiles = () => {
       container: container.current,
       animationData: require("./loading.json"),
     });
+
+    return () => { Lottie.destroy() }
+    
   }, [loading]);
 
 
