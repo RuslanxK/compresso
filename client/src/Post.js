@@ -1,29 +1,9 @@
-import React, { useEffect, useState} from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { postImages } from "./images";
 
-const Post = ({ postData, posts }) => {
+const Post = ({ postData}) => {
 
   const navigate = useNavigate();
-
-const [img, setImg] = useState("")
-
-
-useEffect(() => {
-  
-  const foundImage = postImages.find(image => image.id === postData._id);
-  if (foundImage) {
-  
-    setImg(foundImage.src);
-  } else {
-  
-    setImg(""); 
-  }
-}, [postData]);
-
-
-
- console.log(img)
 
   
 
@@ -39,14 +19,13 @@ useEffect(() => {
       
   const navigateToPost = () => {
 
-    localStorage.setItem("img", img);
     navigate(`/post/${postData._id}`);
   };
 
   return (
     <div className="post" onClick={navigateToPost}>
     
-        <img src={img} width="100%" alt="img" />
+        <img src={`http://localhost:8080/${postData.image}`} width="100%" alt="img" />
     
 
       <h3>{truncatedTitle}</h3>

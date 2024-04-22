@@ -5,10 +5,14 @@ const PORT = 8080;
 
 const app = express();
 
+app.use("/uploads", express.static("uploads"));
+
 app.use(cors());
 app.use(express.json());
 
 require("./configs/database");
+
+
 
 app.use("/api", postRouter)
 

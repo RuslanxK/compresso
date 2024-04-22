@@ -1,6 +1,21 @@
 const express = require("express");
 const router = express.Router();
 const post = require("../models/postModel");
+const multer = require("multer"); 
+
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); 
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname); 
+  },
+});
+
+
+const upload = multer({ storage: storage });
 
 
 
@@ -37,14 +52,17 @@ router.get("/post/:id", async (req, res) => {
 
 
 
-router.post("/posts", async (req, res) => {
-
+router.post("/posts", upload.single("image"), async (req, res) => {
 
   const { title, content } = req.body;
+
+  // Retrieve the filename of the uploaded image from req.file
+  const imagePath = req.file.path;
 
   const Post = new post({
     title,
     content,
+    image: imagePath, // Save the image path in the database
   });
 
   try {
