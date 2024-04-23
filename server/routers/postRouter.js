@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const post = require("../models/postModel");
 const multer = require("multer"); 
+require('dotenv').config()
 
 
 
@@ -54,23 +55,27 @@ router.get("/post/:id", async (req, res) => {
 
 router.post("/posts", upload.single("image"), async (req, res) => {
 
-  const { title, content } = req.body;
+  const secretHeader = req.headers['x-admin-secret'];
+  if (secretHeader === process.env.ADMIN_SECRET) {
+    
+    const { title, content } = req.body;
+    const imagePath = req.file.path;
 
-  // Retrieve the filename of the uploaded image from req.file
-  const imagePath = req.file.path;
+    const Post = new post({
+      title,
+      content,
+      image: imagePath,
+    });
 
-  const Post = new post({
-    title,
-    content,
-    image: imagePath, // Save the image path in the database
-  });
-
-  try {
-    const response = await Post.save();
-    res.status(200).json(response);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json(error.message);
+    try {
+      const response = await Post.save();
+      res.status(200).json(response);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json(error.message);
+    }
+  } else {
+    res.status(401).json({ message: "Unauthorized" });
   }
 });
 

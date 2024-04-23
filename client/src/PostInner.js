@@ -11,6 +11,7 @@ const PostInner = () => {
 
     useEffect(() => {
         const getPost = async () => {
+          
             const { data } = await axios.get(`${process.env.REACT_APP_POSTS_API}/post/${id}`)
             setPost(data)
           
