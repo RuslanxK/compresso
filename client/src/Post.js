@@ -25,7 +25,7 @@ const Post = ({ postData}) => {
   return (
     <div className="post" onClick={navigateToPost}>
     
-        <img src={`http://localhost:8080/${postData.image}`} width="100%" alt="img" />
+        <img src={`https://compresso-server.onrender.com/${postData.image}`} width="100%" alt="img" />
     
 
       <h3>{truncatedTitle}</h3>
