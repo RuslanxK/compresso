@@ -70,7 +70,7 @@ router.post("/posts", upload.single("image"), async (req, res) => {
     res.status(200).json(response);
   } catch (error) {
     console.log(error);
-    res.status(500).json(error);
+    res.status(500).json(error.message);
   }
 });
 
