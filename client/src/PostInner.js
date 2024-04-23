@@ -8,7 +8,6 @@ const PostInner = () => {
 
     const [post, setPost] = useState({})
 
-    const img = localStorage.getItem("img");
 
     useEffect(() => {
         const getPost = async () => {
@@ -26,7 +25,7 @@ const PostInner = () => {
   return (
     <div className='innerPost'>
     
-     <img src={img} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
+     <img src={`http://localhost:8080/${post.image}`} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
 
      <div className='innerPost-content'>
  
