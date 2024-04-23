@@ -25,7 +25,7 @@ const PostInner = () => {
   return (
     <div className='innerPost'>
     
-     <img src={`http://localhost:8080/${post.image}`} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
+     <img src={`https://compresso-server.onrender.com/${post.image}`} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
 
      <div className='innerPost-content'>
  
