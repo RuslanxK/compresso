@@ -40,16 +40,16 @@ const Files = () => {
   }
 
 
-  document.addEventListener("click", (e) => {
-  
-    if (
-      !refOne.current.contains(e.target) &&
-      !refTwo.current.contains(e.target) &&
-      settingShow == true
-    ) {
+
+  const options = () => {
+
       setSettingShow(!settingShow);
-    }
-  });
+    
+  }
+
+ 
+
+
 
   const saveZip = async () => {
     if (images.length) {
@@ -185,7 +185,7 @@ const Files = () => {
         <div className="settings">
           <div>
             <FontAwesomeIcon
-              onClick={() => setSettingShow(!settingShow)}
+              onClick={options}
               className="icon"
               icon={icon({ name: "sliders", style: "solid" })}
               ref={refOne}
