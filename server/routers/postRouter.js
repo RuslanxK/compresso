@@ -2,23 +2,11 @@ const express = require("express");
 const router = express.Router();
 const post = require("../models/postModel");
 const multer = require("multer"); 
+const fs = require("fs");
 require('dotenv').config()
 
 
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/"); 
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + "-" + file.originalname); 
-  },
-});
-
-
-const upload = multer({ storage: storage });
-
-
+const upload = multer();
 
 
 router.get("/posts", async (req, res) => {
@@ -54,17 +42,16 @@ router.get("/post/:id", async (req, res) => {
 
 
 router.post("/posts", upload.single("image"), async (req, res) => {
-
   const secretHeader = req.headers['x-admin-secret'];
   if (secretHeader === process.env.ADMIN_SECRET) {
-    
     const { title, content } = req.body;
-    const imagePath = req.file.path;
+    const imageBuffer = req.file.buffer;
+    const base64Image = imageBuffer.toString("base64");
 
     const Post = new post({
       title,
       content,
-      image: imagePath,
+      image: base64Image,
     });
 
     try {
