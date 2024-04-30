@@ -25,7 +25,7 @@ const Post = ({ postData}) => {
   return (
     <div className="post" onClick={navigateToPost}>
     
-        <img src={process.env.REACT_APP_SERVER_IMAGES + `/${postData.image}`} width="100%" alt="img" />
+        <img src={postData.image} width="100%" alt="img" />
     
 
       <h3>{truncatedTitle}</h3>

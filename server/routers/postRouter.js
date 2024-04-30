@@ -46,7 +46,12 @@ router.post("/posts", upload.single("image"), async (req, res) => {
   if (secretHeader === process.env.ADMIN_SECRET) {
     const { title, content } = req.body;
     const imageBuffer = req.file.buffer;
-    const base64Image = imageBuffer.toString("base64");
+
+    // Determine the file extension
+    const extension = req.file.originalname.split(".").pop();
+
+    // Create data URL
+    const base64Image = `data:image/${extension};base64,${imageBuffer.toString("base64")}`;
 
     const Post = new post({
       title,
