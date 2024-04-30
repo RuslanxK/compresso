@@ -26,7 +26,7 @@ const PostInner = () => {
   return (
     <div className='innerPost'>
     
-     <img src={process.env.REACT_APP_SERVER_IMAGES + `/${post.image}`} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
+     <img src={post.image} alt='img' width={"100%"} height="450px" style={{ objectFit: "cover"}}/>
 
      <div className='innerPost-content'>
  
