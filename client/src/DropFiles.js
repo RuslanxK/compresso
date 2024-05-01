@@ -45,11 +45,13 @@ const DropFiles = () => {
           maxSizeMB: 1,
           maxWidthOrHeight: settings.resolution,
           useWebWorker: true,
+      
         };
         try {
           const compressedFile = await imageCompression(file, options);
-          console.log("compressedFile instanceof Blob", compressedFile);
           resolve(compressedFile)
+
+          
         } catch (error) {
           console.log(error);
         }
